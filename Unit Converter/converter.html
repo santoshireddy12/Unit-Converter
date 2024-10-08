@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: rgb(151, 62, 90);
+            font-size: medium;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        .container {
+            background-image: url('https://wallpapers.com/images/hd/floral-aesthetic-background-design-dcneprhnxqqvrysr.jpg');
+            padding: 10px;
+            margin-bottom: 80px;
+            border-radius: 10px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            height: 220px;
+            margin: 5px; 
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-control {
+            height: 30px;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+
+        .heading {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: rgb(148, 84, 104);
+            font-size: 50px;
+            text-rendering: geometricPrecision;
+            text-shadow: 0 0 25px rgb(84, 5, 32);
+        }
+
+        .container-heading {
+            font-size: 1.3rem;
+            color: rgb(151, 62, 90);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="heading">Unit Converter</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="container">
+                <div class="container-heading">Weight Conversion</div>
+                <div class="row converter-section">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="kg">Kilograms (kg)</label>
+                            <input type="number" class="form-control" id="kg" oninput="updateKgPounds()">
+                        </div>
+                        <div class="form-group">
+                            <label for="pounds">Pounds (lbs)</label>
+                            <input type="number" class="form-control" id="pounds" oninput="updatePoundsKg()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="container">
+                <div class="container-heading">Distance Conversion</div>
+                <div class="row converter-section">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="km">Kilometers (km)</label>
+                            <input type="number" class="form-control" id="km" oninput="updateKmMiles()">
+                        </div>
+                        <div class="form-group">
+                            <label for="miles">Miles (mi)</label>
+                            <input type="number" class="form-control" id="miles" oninput="updateMilesKm()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="container">
+                <div class="container-heading">Temperature Conversion</div>
+                <div class="row converter-section">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="celsius">Celsius (°C)</label>
+                            <input type="number" class="form-control" id="celsius" oninput="updateCelsiusFahrenheit()">
+                        </div>
+                        <div class="form-group">
+                            <label for="fahrenheit">Fahrenheit (°F)</label>
+                            <input type="number" class="form-control" id="fahrenheit" oninput="updateFahrenheitCelsius()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="Javascript.js"></script>
+</body>
+</html>
